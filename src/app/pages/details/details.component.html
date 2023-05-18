@@ -1,0 +1,65 @@
+<div class="{{ currentScreenSize }}">
+  <img src="assets/logo.png" alt="logo" class="imgLogo" />
+  <div class="details-container">
+    <div class="details-left">
+      <p class="detailsName">{{ pokemonDetails?.name }}</p>
+      <div class="detailsHeader">
+        <p>Cod: #{{ pokemonDetails?.code }}</p>
+
+        <div class="detailsType">
+          <p class="detailsTypeName">Tipo:</p>
+          <span
+            *ngFor="let type of pokemonDetails?.types"
+            [ngClass]="type"
+            style="color: #fff; padding: 5px; margin: 5px; border-radius: 5px"
+          >
+            {{ type }}
+          </span>
+        </div>
+      </div>
+      <div>
+        <p class="detailsDescriptionHeader">Descrição</p>
+        <p class="detailsDescription">
+          "Pokémon é uma franquia de mídia que pertence a The Pokémon Company,
+          tendo sido criada por Satoshi Tajiri em 1995. Ela é centrada em
+          criaturas ficcionais chamadas "Pokémon", que os seres humanos capturam
+          e os treinam para lutarem entre si com seus ataques de diversos
+          tipos."
+        </p>
+      </div>
+      <p class="detailsInfoHeader">Informações</p>
+      <div class="detailsInfo">
+        <p>Altura:</p>
+        <span> {{ pokemonDetails?.height }}cm </span>
+      </div>
+      <div class="detailsInfo">
+        <p>Peso:</p>
+        <span> {{ pokemonDetails?.weight }}kg </span>
+      </div>
+
+      <div class="attribute" *ngFor="let atributo of atributos; let i = index">
+        <div class="attribute-info">
+          <div class="attribute-name">
+            <p>{{ atributo.nome }}</p>
+          </div>
+          <div class="attribute-bar">
+            <div style="background-color: #fbfdff; border-radius: 2px">
+              <div
+                style="height: 20px; border-radius: 2px"
+                [style.width.%]="atributo.valor"
+                [style.backgroundColor]="getProgressBarColor(i)"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="details-right">
+      <img
+        src="{{ getPokemonPhoto() }}"
+        [alt]="pokemonDetails?.name"
+        class="imgPokemon"
+      />
+    </div>
+  </div>
+</div>

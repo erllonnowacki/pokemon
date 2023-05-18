@@ -1,0 +1,46 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="pagination">
+    <p class="paginationTitle">Pokédex</p>
+    <div>
+      <button
+        class="buttonPagination"
+        mat-mini-fab
+        (click)="previousPage()"
+        [disabled]="currentPage === 1"
+      >
+        <mat-icon class="iconPagination">chevron_left</mat-icon>
+      </button>
+      <button
+        class="buttonPagination"
+        mat-mini-fab
+        (click)="nextPage()"
+        [disabled]="currentPage === totalPages"
+      >
+        <mat-icon class="iconPagination">chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <mat-grid-list [cols]="cols" rowHeight="400px" gutterSize="32px">
+    <mat-grid-tile *ngFor="let pokemon of pokemonList" class="mainTile">
+      <mat-card (click)="navigateToDetails(pokemon)">
+        <mat-card-title>
+          <p class="mainPokemonName">{{ pokemon.name }}</p>
+          <span class="mainPokemonValue">#{{ pokemon.code }}</span>
+        </mat-card-title>
+        <mat-card-content>
+          <img [src]="pokemon.image" [alt]="pokemon.name" />
+          <div class="mainAtt">
+            <p class="mainAttName">Altura:</p>
+            <p class="mainAttValue">{{ pokemon.height }}cm</p>
+          </div>
+          <div class="mainAtt">
+            <p class="mainAttName">Peso:</p>
+            <p class="mainAttValue">{{ pokemon.weight }}kg</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -1,0 +1,280 @@
+/* Estilos para telas pequenas (até 599px) */
+@media (max-width: 599px) {
+  .details-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 20px 50px 0px 20px;
+    align-items: center;
+  }
+
+  .details-left {
+    width: 50%;
+    flex-grow: -1;
+  }
+
+  .details-right {
+    width: 50%;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .detailsName {
+    font-size: 20px;
+    font-weight: bold;
+    color: #233674;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+
+  .detailsTypeName {
+    font-size: 16px;
+    transition: 200ms ease-in-out;
+    font-weight: bold;
+    color: #233674;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+
+  .attribute {
+    margin-bottom: 0px;
+  }
+
+  .attribute-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .attribute-name {
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .attribute-bar {
+    flex: 3;
+    margin-left: 10px;
+  }
+
+  .imgLogo {
+    margin-left: 35%;
+    height: 40px;
+  }
+
+  .imgPokemon {
+    width: 35%;
+  }
+
+  .detailsHeader {
+    color: #233674;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .detailsType {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .detailsDescriptionHeader {
+    font-size: 16px;
+    font-weight: bold;
+    color: #233674;
+  }
+
+  .detailsDescription {
+    font-size: 14px;
+    font-weight: semi-bold;
+    color: #233674;
+    text-align: justify;
+  }
+
+  .detailsInfoHeader {
+    color: #233674;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+  }
+
+  .detailsInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: semi-bold;
+    color: #233674;
+    margin: 0px;
+  }
+}
+
+/* Estilos para telas grandes (a partir de 960px) */
+@media (min-width: 600px) {
+  .details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 50px 0px 50px;
+  }
+
+  .details-left {
+    width: 50%;
+  }
+
+  .details-right {
+    width: 50%;
+    text-align: center;
+  }
+
+  .detailsName {
+    font-size: 35px;
+    font-weight: bold;
+    color: #233674;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+
+  .attribute {
+    margin-bottom: 0px;
+  }
+
+  .attribute-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .attribute-name {
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .attribute-bar {
+    flex: 3;
+    margin-left: 10px;
+  }
+
+  .imgLogo {
+    margin: 50px 0px 0px 50px;
+    height: 80px;
+  }
+
+  .imgPokemon {
+    width: 65%;
+  }
+
+  .detailsHeader {
+    color: #233674;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .detailsType {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .detailsDescriptionHeader {
+    font-size: 22px;
+    font-weight: bold;
+    color: #233674;
+  }
+
+  .detailsDescription {
+    font-size: 18px;
+    font-weight: semi-bold;
+    color: #233674;
+    text-align: justify;
+  }
+
+  .detailsInfoHeader {
+    color: #233674;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0px;
+  }
+
+  .detailsInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: semi-bold;
+    color: #233674;
+    margin: 0px;
+  }
+}
+
+.normal {
+  background-color: #a6a877;
+}
+
+.grass {
+  background-color: #77c850;
+}
+
+.fire {
+  background-color: #ee7f30;
+}
+
+.water {
+  background-color: #678fee;
+}
+
+.electric {
+  background-color: #f7cf2e;
+}
+
+.ice {
+  background-color: #98d5d7;
+}
+
+.ground {
+  background-color: #dfbf69;
+}
+
+.flying {
+  background-color: #a98ff0;
+}
+
+.poison {
+  background-color: #a040a0;
+}
+
+.fighting {
+  background-color: #bf3029;
+}
+
+.psychic {
+  background-color: #f65687;
+}
+
+.dark {
+  background-color: #725847;
+}
+
+.rock {
+  background-color: #b8a137;
+}
+
+.bug {
+  background-color: #a8b720;
+}
+
+.ghost {
+  background-color: #6e5896;
+}
+
+.steel {
+  background-color: #b9b7cf;
+}
+
+.dragon {
+  background-color: #6f38f6;
+}
+
+.fairy {
+  background-color: #f9aec7;
+}

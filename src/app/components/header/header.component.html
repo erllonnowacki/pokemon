@@ -1,0 +1,24 @@
+<div class="{{ currentScreenSize }}">
+  <div class="header">
+    <div>
+      <img src="assets/logo.png" alt="logo" class="logo" />
+      <div>
+        <div style="display: block; overflow: auto">
+          <span class="headerTop"
+            >Explore o mundo dos
+            <p class="headerFooter">Pokémons</p>
+          </span>
+        </div>
+
+        <p class="headerBottom">Descubra todas as espécies de Pokémons</p>
+      </div>
+      <div class="searchSection">
+        <input type="text" [(ngModel)]="query" class="inputHeader" />
+        <button (click)="onSearchButtonClick()" class="buttonHeader">
+          Buscar
+        </button>
+      </div>
+    </div>
+    <img src="assets/banner.png" alt="banner" class="banner" />
+  </div>
+</div>
